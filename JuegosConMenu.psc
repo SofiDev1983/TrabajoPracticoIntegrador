@@ -12,15 +12,17 @@ Algoritmo  Menu_Juegos
 		Mostrar "4 - Numero prohibido"
 		leer OpcionJuego
 		
-		si opcionJuego <- 5 Entonces
-			Escribir "ERROR: La opcion seleccionada NO ES VALIDA."
-		SiNo
+		// Verifica que la opcion seleccionada se encuentre dentro de las opciones del menu
+		si opcionJuego >=1 y opcionJuego <= 4 Entonces
 			Segun  OpcionJuego Hacer
 				1: JuegoDeLaMemoria()
 				2: PiedraPapelTijera()
 				3: Carrera_Caballos()	
 				4: Numero_Prohibido()	
 			FinSegun
+			
+		SiNo
+			Escribir "ERROR: La opcion seleccionada NO ES VALIDA."
 		FinSi
 		
 		Escribir  "Desea seguir jugando? 1 (si) 2 (no)"
