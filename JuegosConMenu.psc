@@ -12,13 +12,16 @@ Algoritmo  Menu_Juegos
 		Mostrar "4 - Numero prohibido"
 		leer OpcionJuego
 		
-		
-		Segun  OpcionJuego Hacer
-			1: JuegoDeLaMemoria()
-			2: PiedraPapelTijera()
-			3: Carrera_Caballos()	
-			4: Numero_Prohibido()	
-		FinSegun
+		si opcionJuego <- 5 Entonces
+			Escribir "ERROR: La opcion seleccionada NO ES VALIDA."
+		SiNo
+			Segun  OpcionJuego Hacer
+				1: JuegoDeLaMemoria()
+				2: PiedraPapelTijera()
+				3: Carrera_Caballos()	
+				4: Numero_Prohibido()	
+			FinSegun
+		FinSi
 		
 		Escribir  "Desea seguir jugando? 1 (si) 2 (no)"
 		Leer  SeguirJugando
@@ -28,7 +31,8 @@ Algoritmo  Menu_Juegos
 	
 FinAlgoritmo
 
-Funcion Numero_Prohibido ()
+Funcion Numero_Prohibido
+	
 	Definir cantJugadores, i, j, k, puntosTurnoJug1, puntosTurnoJug2, puntosTurnoJug3, puntosTurnoJug4, puntosTotalesJug1, puntosTotalesJug2, puntosTotalesJug3, puntosTotalesJug4, dado como entero;
 	Definir ceroAcum, unoAcum, dosAcum, tresAcum, cuatroAcum, cincoAcum, seisAcum, elNumeroProhibido como entero;
 	Definir jug1, jug2, jug3, jug4, respuesta como caracter;
@@ -134,7 +138,7 @@ Funcion Numero_Prohibido ()
 							Finsi
 						Finsi
 					Finsi
-					mostrar "1: ", unoAcum, "   2: ", dosAcum, "   3: ", tresAcum, "   4: ", cuatroAcum, "   5: ", cincoAcum, "   6: ", seisAcum, "   0: ", ceroAcum;
+					mostrar "1: ", unoAcum, "   2: ", dosAcum, "   3: ", tresAcum, "   4: ", cuatroAcum, "   5: ", cincoAcum, "   6: ", seisAcum;
 					Si unoAcum >= 3 o dosAcum >= 3 o tresAcum >= 3 o cuatroAcum >= 3 o cincoAcum >= 3 o seisAcum >= 3 o ceroAcum >= 3 entonces
 						
 						escribir "fin del turno de: ", jug1, ", PERDIÓ LOS PUNTOS DE ESTE TURNO porque salió el número: ", elNumeroProhibido, " tres veces";
@@ -162,7 +166,7 @@ Funcion Numero_Prohibido ()
 					Sino 
 						
 						
-						escribir jug1, " ¿desea tirar nuevamente? (s/n)";
+						escribir jug1, " ¿desea tirar nuevamente? (- n - o no para pasar de turno / cualquier tecla para seguir)";
 						leer respuesta;
 						Si respuesta == "n" O respuesta == "N" o respuesta == "no" o respuesta == "NO" entonces
 							escribir "fin del turno de: ", jug1;
@@ -235,7 +239,7 @@ Funcion Numero_Prohibido ()
 								Finsi
 							Finsi
 						Finsi
-						mostrar "1: ", unoAcum, "   2: ", dosAcum, "   3: ", tresAcum, "   4: ", cuatroAcum, "   5: ", cincoAcum, "   6: ", seisAcum, "   0: ", ceroAcum;
+						mostrar "1: ", unoAcum, "   2: ", dosAcum, "   3: ", tresAcum, "   4: ", cuatroAcum, "   5: ", cincoAcum, "   6: ", seisAcum;
 						Si unoAcum >= 3 o dosAcum >= 3 o tresAcum >= 3 o cuatroAcum >= 3 o cincoAcum >= 3 o seisAcum >= 3 o ceroAcum >= 3 entonces
 							
 							
@@ -264,7 +268,7 @@ Funcion Numero_Prohibido ()
 						Sino 
 							
 							
-							escribir jug2, " ¿desea tirar nuevamente? (s/n)";
+							escribir jug2, " ¿desea tirar nuevamente? (- n - o no para pasar de turno / cualquier tecla para seguir)";
 							leer respuesta;
 							Si respuesta == "n" O respuesta == "N" o respuesta == "no" o respuesta == "NO" entonces
 								escribir "fin del turno de: ", jug2;
@@ -336,7 +340,7 @@ Funcion Numero_Prohibido ()
 									Finsi
 								Finsi
 							Finsi
-							mostrar "1: ", unoAcum, "   2: ", dosAcum, "   3: ", tresAcum, "   4: ", cuatroAcum, "   5: ", cincoAcum, "   6: ", seisAcum, "   0: ", ceroAcum;
+							mostrar "1: ", unoAcum, "   2: ", dosAcum, "   3: ", tresAcum, "   4: ", cuatroAcum, "   5: ", cincoAcum, "   6: ", seisAcum;
 							Si unoAcum >= 3 o dosAcum >= 3 o tresAcum >= 3 o cuatroAcum >= 3 o cincoAcum >= 3 o seisAcum >= 3 o ceroAcum >= 3 entonces
 								
 								
@@ -365,7 +369,7 @@ Funcion Numero_Prohibido ()
 							Sino 
 								
 								
-								escribir jug3, " ¿desea tirar nuevamente? (s/n)";
+								escribir jug3, " ¿desea tirar nuevamente? (- n - o no para pasar de turno / cualquier tecla para seguir)";
 								leer respuesta;
 								Si respuesta == "n" O respuesta == "N" o respuesta == "no" o respuesta == "NO" entonces
 									escribir "fin del turno de: ", jug3;
@@ -437,7 +441,7 @@ Funcion Numero_Prohibido ()
 										Finsi
 									Finsi
 								Finsi
-								mostrar "1: ", unoAcum, "   2: ", dosAcum, "   3: ", tresAcum, "   4: ", cuatroAcum, "   5: ", cincoAcum, "   6: ", seisAcum, "   0: ", ceroAcum;
+								mostrar "1: ", unoAcum, "   2: ", dosAcum, "   3: ", tresAcum, "   4: ", cuatroAcum, "   5: ", cincoAcum, "   6: ", seisAcum;
 								Si unoAcum >= 3 o dosAcum >= 3 o tresAcum >= 3 o cuatroAcum >= 3 o cincoAcum >= 3 o seisAcum >= 3 o ceroAcum >= 3 entonces
 									
 									
@@ -466,7 +470,7 @@ Funcion Numero_Prohibido ()
 								Sino 
 									
 									
-									escribir jug4, " ¿desea tirar nuevamente? (s/n)";
+									escribir jug4, " ¿desea tirar nuevamente? (- n - o no para pasar de turno / cualquier tecla para seguir)";
 									leer respuesta;
 									Si respuesta == "n" O respuesta == "N" o respuesta == "no" o respuesta == "NO" entonces
 										escribir "fin del turno de: ", jug4;
@@ -822,6 +826,9 @@ Funcion JuegoDeLaMemoria
 		//mostrar arrayJuegoMemoria[f];
 	Finpara
 	
+	Escribir "Ahora se pondrá en juego su MEMORIA, recuerde e ingrese los números que ira viendo a continuación. Suerte...";
+	esperar 3 segundos
+	borrarpantalla
 	
 	
 	Para f=0 hasta 9 con paso 1 hacer;
@@ -836,7 +843,7 @@ Funcion JuegoDeLaMemoria
 			Si primerNumero == arrayJuegoMemoria[0] entonces
 				Escribir "Bien, le pegaste"
 			Sino 
-				Escribir "Le erraste giiiiiil";
+				Escribir "Le erraste!!!";
 			Finsi
 		sino		
 			Si f==1 entonces // PARA ADIVINAR EL SEGUNDO NÚMERO
@@ -851,7 +858,7 @@ Funcion JuegoDeLaMemoria
 				Si primerNumero == arrayJuegoMemoria[0] y segundoNumero  == arrayJuegoMemoria[1] entonces
 					Escribir "Bien, le pegaste"
 				Sino 
-					Escribir "Le erraste giiiiiil";
+					Escribir "Le erraste!!!";
 				Finsi
 			sino
 				Si f==2 entonces // PARA ADIVINAR EL TERCER NÚMERO
@@ -869,7 +876,7 @@ Funcion JuegoDeLaMemoria
 					Si primerNumero == arrayJuegoMemoria[0] y segundoNumero  == arrayJuegoMemoria[1] y tercerNumero == arrayJuegoMemoria[2] entonces
 						Escribir "Bien, le pegaste"
 					Sino 
-						Escribir "Le erraste giiiiiil";
+						Escribir "Le erraste!!!";
 					Finsi
 				sino
 					Si f==3 entonces // PARA ADIVINAR EL CUARTO NÚMERO
@@ -889,7 +896,7 @@ Funcion JuegoDeLaMemoria
 						Si primerNumero == arrayJuegoMemoria[0] y segundoNumero  == arrayJuegoMemoria[1] y tercerNumero == arrayJuegoMemoria[2] y cuartoNumero == arrayJuegoMemoria[3] entonces
 							Escribir "Bien, le pegaste"
 						Sino 
-							Escribir "Le erraste giiiiiil";
+							Escribir "Le erraste!!!";
 						Finsi
 					Sino
 						Si f==4 entonces // PARA ADIVINAR EL QUINTO NÚMERO
@@ -911,7 +918,7 @@ Funcion JuegoDeLaMemoria
 							Si primerNumero == arrayJuegoMemoria[0] y segundoNumero  == arrayJuegoMemoria[1] y tercerNumero == arrayJuegoMemoria[2] y cuartoNumero == arrayJuegoMemoria[3] y quintoNumero == arrayJuegoMemoria[4]entonces
 								Escribir "Bien, le pegaste"
 							Sino 
-								Escribir "Le erraste giiiiiil";
+								Escribir "Le erraste!!!";
 							Finsi
 						Sino
 							Si f==5 entonces // PARA ADIVINAR EL SEXTO NÚMERO
@@ -935,7 +942,7 @@ Funcion JuegoDeLaMemoria
 								Si primerNumero == arrayJuegoMemoria[0] y segundoNumero  == arrayJuegoMemoria[1] y tercerNumero == arrayJuegoMemoria[2] y cuartoNumero == arrayJuegoMemoria[3] y quintoNumero == arrayJuegoMemoria[4] y sextoNumero == arrayJuegoMemoria[5] entonces
 									Escribir "Bien, le pegaste"
 								Sino 
-									Escribir "Le erraste giiiiiil";
+									Escribir "Le erraste!!!";
 								Finsi
 							Sino
 								Si f==6 entonces // PARA ADIVINAR EL SÉPTIMO NÚMERO
@@ -961,7 +968,7 @@ Funcion JuegoDeLaMemoria
 									Si primerNumero == arrayJuegoMemoria[0] y segundoNumero  == arrayJuegoMemoria[1] y tercerNumero == arrayJuegoMemoria[2] y cuartoNumero == arrayJuegoMemoria[3] y quintoNumero == arrayJuegoMemoria[4] y sextoNumero == arrayJuegoMemoria[5] y septimoNumero == arrayJuegoMemoria[6] entonces
 										Escribir "Bien, le pegaste"
 									Sino 
-										Escribir "Le erraste giiiiiil";
+										Escribir "Le erraste!!!";
 									Finsi
 								Sino
 									Si f==7 entonces // PARA ADIVINAR EL OCTAVO NÚMERO
@@ -990,7 +997,7 @@ Funcion JuegoDeLaMemoria
 										Si primerNumero == arrayJuegoMemoria[0] y segundoNumero  == arrayJuegoMemoria[1] y tercerNumero == arrayJuegoMemoria[2] y cuartoNumero == arrayJuegoMemoria[3] y quintoNumero == arrayJuegoMemoria[4] y sextoNumero == arrayJuegoMemoria[5] y septimoNumero == arrayJuegoMemoria[6] y octavoNumero == arrayJuegoMemoria[7] entonces
 											Escribir "Bien, le pegaste"
 										Sino 
-											Escribir "Le erraste giiiiiil";
+											Escribir "Le erraste!!!";
 										Finsi
 									Sino
 										Si f==8 entonces // PARA ADIVINAR EL NOVENO NÚMERO
@@ -1021,7 +1028,7 @@ Funcion JuegoDeLaMemoria
 											Si primerNumero == arrayJuegoMemoria[0] y segundoNumero  == arrayJuegoMemoria[1] y tercerNumero == arrayJuegoMemoria[2] y cuartoNumero == arrayJuegoMemoria[3] y quintoNumero == arrayJuegoMemoria[4] y sextoNumero == arrayJuegoMemoria[5] y septimoNumero == arrayJuegoMemoria[6] y octavoNumero == arrayJuegoMemoria[7] y novenoNumero == arrayJuegoMemoria[8] entonces
 												Escribir "Bien, le pegaste"
 											Sino 
-												Escribir "Le erraste giiiiiil";
+												Escribir "Le erraste!!!";
 											Finsi
 										Sino
 											Si f==9 entonces // PARA ADIVINAR EL DECIMO NÚMERO
@@ -1054,7 +1061,7 @@ Funcion JuegoDeLaMemoria
 												Si primerNumero == arrayJuegoMemoria[0] y segundoNumero  == arrayJuegoMemoria[1] y tercerNumero == arrayJuegoMemoria[2] y cuartoNumero == arrayJuegoMemoria[3] y quintoNumero == arrayJuegoMemoria[4] y sextoNumero == arrayJuegoMemoria[5] y septimoNumero == arrayJuegoMemoria[6] y octavoNumero == arrayJuegoMemoria[7] y novenoNumero == arrayJuegoMemoria[8] y decimoNumero == arrayJuegoMemoria[9] entonces
 													Escribir "Bien, le pegaste"
 												Sino 
-													Escribir "Le erraste giiiiiil";
+													Escribir "Le erraste!!!";
 												Finsi
 											Finsi
 										Finsi	
@@ -1067,8 +1074,6 @@ Funcion JuegoDeLaMemoria
 			Finsi
 		Finsi
 		
-		
-		//Hasta que 
 	Finpara
 
 FinFuncion
